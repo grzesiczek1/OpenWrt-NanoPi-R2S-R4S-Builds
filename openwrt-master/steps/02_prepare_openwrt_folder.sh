@@ -6,22 +6,11 @@ if [ ! -e "$ROOTDIR/build" ]; then
     exit 1
 fi
 
-echo "script 2 starting catalog"
-pwd
-ls
-
 cd "$ROOTDIR/build"
-
-echo "script 2 build catalog"
-pwd
-ls
-
-mkdir openwrt
 
 echo "copying starts" 
 cp -R openwrt-fresh-master openwrt
 echo "copying stops"
-
 
 #freeze revision to 22.03.5
 cd openwrt
