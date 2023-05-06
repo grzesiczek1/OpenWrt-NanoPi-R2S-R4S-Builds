@@ -9,7 +9,7 @@ fi
 BUILDDIR="$ROOTDIR/build"
 
 cd "$BUILDDIR/openwrt"
-OPENWRT_BRANCH=22.03
+OPENWRT_BRANCH=master
 
 # -------------- UBOOT -----------------------------------
 # replace uboot with local uboot package
@@ -35,7 +35,7 @@ cp $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/mbedtls/patches/100-Implemen
    package/libs/mbedtls/patches/
 
 # enable motorcomm for R2C
-echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.10
+echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.15
 
 # add caiaq usb sound module for shairport with old soundcard
 ADDON_PATH='snd-usb-caiaq.makefileaddon'
@@ -43,13 +43,13 @@ ADDON_DEST='package/kernel/linux/modules/usb.mk'
 if ! grep -q " --- $ADDON_PATH" $ADDON_DEST; then
    echo "Adding $ADDON_PATH to $ADDON_DEST"
    echo "# --- $ADDON_PATH" >> $ADDON_DEST
-   cat $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/kernel-5.10/$ADDON_PATH >> $ADDON_DEST
+   cat $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/kernel-5.15/$ADDON_PATH >> $ADDON_DEST
 else
    echo "Already added $ADDON_PATH to $ADDON_DEST"
 fi
 
 # revert to fresh config
-cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.10 target/linux/generic/config-5.10
+cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.15 target/linux/generic/config-5.10
 
 #cleanup
 if [ -e .config ]; then

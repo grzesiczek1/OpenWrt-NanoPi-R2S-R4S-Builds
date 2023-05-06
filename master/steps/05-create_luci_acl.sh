@@ -11,4 +11,4 @@ cd "$ROOTDIR/build"
 # install feeds
 cd openwrt
 
-/bin/bash $ROOTDIR/openwrt-22.03/steps/create_acl_for_luci.sh -a
+/bin/bash $ROOTDIR/openwrt-master/steps/create_acl_for_luci.sh -a
