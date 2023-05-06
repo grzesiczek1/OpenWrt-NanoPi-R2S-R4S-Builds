@@ -6,7 +6,13 @@ if [ ! -e "$ROOTDIR/build" ]; then
     exit 1
 fi
 
+pwd
+ls
+
 cd "$ROOTDIR/build"
+
+pwd
+ls
 
 cp -R openwrt-fresh-master openwrt
 
