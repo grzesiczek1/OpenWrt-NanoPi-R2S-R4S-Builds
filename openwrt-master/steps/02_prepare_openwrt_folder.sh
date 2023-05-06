@@ -16,6 +16,8 @@ echo "script 2 build catalog"
 pwd
 ls
 
+mkdir openwrt
+
 echo "copying starts" 
 cp -R openwrt-fresh-master openwrt
 echo "copying stops"
