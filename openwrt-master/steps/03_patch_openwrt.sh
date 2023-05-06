@@ -30,9 +30,12 @@ rsync -avz $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/target/ target
 # r8168 driver for r4s
 cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/r8168 package/kernel/
 
+
+### Commenting out is it failed to build after switching to master
+### Research needed what that exactly does and why it failes
 # enable armv8 crypto for mbedtls
-cp $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/mbedtls/patches/100-Implements-AES-and-GCM-with-ARMv8-Crypto-Extensions.patch \
-   package/libs/mbedtls/patches/
+#cp $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/mbedtls/patches/100-Implements-AES-and-GCM-with-ARMv8-Crypto-Extensions.patch \
+#   package/libs/mbedtls/patches/
 
 # enable motorcomm for R2C
 echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.15
