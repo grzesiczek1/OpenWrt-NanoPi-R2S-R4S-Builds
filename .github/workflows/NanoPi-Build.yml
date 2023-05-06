@@ -217,7 +217,7 @@ jobs:
       with:
         name: OpenWrt ${{ env.OPENWRT_BRANCH }} ${{ env.BUILD_STRING }} 
         allowUpdates: true
-        tag: OpenWrtAO-${{ env.OPENWRT_BRANCH }}-${{ env.RELTAG }}
+        tag: OpenWrtGO-${{ env.OPENWRT_BRANCH }}-${{ env.RELTAG }}
         commit: main
         replacesArtifacts: true
         token: ${{ secrets.GITHUB_TOKEN }}
