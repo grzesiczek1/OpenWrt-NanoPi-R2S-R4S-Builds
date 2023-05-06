@@ -12,9 +12,9 @@ echo "copying starts"
 cp -R openwrt-fresh-master openwrt
 echo "copying stops"
 
-#freeze revision to 22.03.5
+#freeze revision to SNAPSHOT from May 5, 2023
 cd openwrt
-git reset --hard 863f769b75beb17b1965786f473b700e0ba0f879
+git reset --hard bbc7de3b164f43f44feff9ef8e72a2b475953eec
 
 echo "Current OpenWRT commit"
 git log -1
