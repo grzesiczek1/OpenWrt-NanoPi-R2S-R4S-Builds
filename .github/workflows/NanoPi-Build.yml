@@ -24,7 +24,7 @@ on:
       openwrt_branch:
         description: 'OpenWrt Branch to build'     
         required: true
-        default: '22.03'
+        default: 'master'
         type: choice
         options:
         - '21.02'
@@ -37,7 +37,7 @@ on:
       model_R2S:
         description: 'Build R2S'
         type: boolean
-        default: true
+        default: false
       model_R2C:
         description: 'Build R2C'
         type: boolean
@@ -45,11 +45,11 @@ on:
       build_mini:
         description: 'Build mini seed'
         type: boolean
-        default: false
+        default: true
       build_full:
         description: 'Build full seed'
         type: boolean
-        default: true
+        default: false
 jobs:
   init:
     runs-on: ubuntu-22.04
