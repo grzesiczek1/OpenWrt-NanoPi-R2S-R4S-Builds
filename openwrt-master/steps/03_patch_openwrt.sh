@@ -11,11 +11,13 @@ BUILDDIR="$ROOTDIR/build"
 cd "$BUILDDIR/openwrt"
 OPENWRT_BRANCH=master
 
+## Do not replace arm tusted firmware
+## Continue with upstream available boot packages
 # -------------- UBOOT -----------------------------------
 # replace uboot with local uboot package
 # this version does not need arm-trusted-firmware-rk3328
-rm -rf package/boot/uboot-rockchip
-cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/uboot-rockchip package/boot/
+# rm -rf package/boot/uboot-rockchip
+# cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/uboot-rockchip package/boot/
 
 # -------------- target linux/rockchip ----------------
 # replace target rockchip with original one
