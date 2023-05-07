@@ -8,9 +8,7 @@ fi
 
 cd "$ROOTDIR/build"
 
-echo "copying starts" 
 cp -R openwrt-fresh-master openwrt
-echo "copying stops"
 
 #freeze revision to SNAPSHOT from May 5, 2023
 cd openwrt

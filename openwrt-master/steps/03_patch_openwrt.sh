@@ -38,7 +38,7 @@ cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/r8168 package/kernel/
 #   package/libs/mbedtls/patches/
 
 # enable motorcomm for R2C
-echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.15
+# echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.15
 
 # add caiaq usb sound module for shairport with old soundcard
 ADDON_PATH='snd-usb-caiaq.makefileaddon'
@@ -52,7 +52,7 @@ else
 fi
 
 # revert to fresh config
-cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.15 target/linux/generic/config-5.10
+cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.15 target/linux/generic/config-5.15
 
 #cleanup
 if [ -e .config ]; then
