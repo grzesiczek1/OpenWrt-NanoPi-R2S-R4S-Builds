@@ -41,15 +41,15 @@ cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/r8168 package/kernel/
 # echo "CONFIG_MOTORCOMM_PHY=y" >> target/linux/rockchip/armv8/config-5.15
 
 # add caiaq usb sound module for shairport with old soundcard
-ADDON_PATH='snd-usb-caiaq.makefileaddon'
-ADDON_DEST='package/kernel/linux/modules/usb.mk'
-if ! grep -q " --- $ADDON_PATH" $ADDON_DEST; then
-   echo "Adding $ADDON_PATH to $ADDON_DEST"
-   echo "# --- $ADDON_PATH" >> $ADDON_DEST
-   cat $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/kernel-5.15/$ADDON_PATH >> $ADDON_DEST
-else
-   echo "Already added $ADDON_PATH to $ADDON_DEST"
-fi
+#ADDON_PATH='snd-usb-caiaq.makefileaddon'
+#ADDON_DEST='package/kernel/linux/modules/usb.mk'
+#if ! grep -q " --- $ADDON_PATH" $ADDON_DEST; then
+#   echo "Adding $ADDON_PATH to $ADDON_DEST"
+#   echo "# --- $ADDON_PATH" >> $ADDON_DEST
+#   cat $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/kernel-5.15/$ADDON_PATH >> $ADDON_DEST
+#else
+#   echo "Already added $ADDON_PATH to $ADDON_DEST"
+#fi
 
 # revert to fresh config
 cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.15 target/linux/generic/config-5.15
