@@ -19,13 +19,15 @@ OPENWRT_BRANCH=master
 # rm -rf package/boot/uboot-rockchip
 # cp -R $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/package/uboot-rockchip package/boot/
 
+## Do not replace target upstream rockchip repo
 # -------------- target linux/rockchip ----------------
 # replace target rockchip with original one
-rm -rf target/linux/rockchip
-cp -R $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/rockchip target/linux/
+# rm -rf target/linux/rockchip
+# cp -R $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/rockchip target/linux/
 
+## Do not sync and override targets
 # override manually some files in the rockchip target using rsync to merge folders and override same filenames
-rsync -avz $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/target/ target
+# rsync -avz $ROOTDIR/openwrt-$OPENWRT_BRANCH/patches/target/ target
 
 # ------------------ packages ------------------------------------
 
