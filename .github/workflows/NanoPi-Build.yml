@@ -220,6 +220,6 @@ jobs:
         tag: OpenWrtGO-${{ env.OPENWRT_BRANCH }}-${{ env.RELTAG }}
         commit: main
         replacesArtifacts: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
         bodyFile: "openwrt-${{ env.OPENWRT_BRANCH }}/release-info.md"
         artifacts: ./artifact/*.img.gz
