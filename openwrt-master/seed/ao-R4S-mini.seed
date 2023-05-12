@@ -115,6 +115,12 @@ CONFIG_PACKAGE_kmod-fs-ext4=y
 CONFIG_PACKAGE_kmod-fs-f2fs=y
 CONFIG_PACKAGE_kmod-fs-squashfs=y
 CONFIG_PACKAGE_kmod-fs-exfat=y
+CONFIG_PACKAGE_kmod-nf-conntrack=y
+CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
+CONFIG_PACKAGE_kmod-nf-ipt=y
+CONFIG_PACKAGE_kmod-nf-ipt6=y
+CONFIG_PACKAGE_kmod-nf-nat=y
+CONFIG_PACKAGE_kmod-nf-nat6=y
 
 # Common packages that are part of the build
 CONFIG_PACKAGE_zlib=y
@@ -151,6 +157,7 @@ CONFIG_PACKAGE_libopenssl=y
 CONFIG_PACKAGE_libopenssl-conf=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 CONFIG_PACKAGE_libncurses=y
+
 
 CONFIG_DEVEL=y
 CONFIG_TOOLCHAINOPTS=y
@@ -219,19 +226,15 @@ CONFIG_PACKAGE_dnsmasq_full_tftp=y
 CONFIG_PACKAGE_ebtables-nft=y
 CONFIG_PACKAGE_f2fs-tools=y
 CONFIG_PACKAGE_f2fsck=y
-CONFIG_PACKAGE_ip6tables-nft=y
-CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
 CONFIG_PACKAGE_iptables-mod-ipopt=y
-CONFIG_PACKAGE_iptables-nft=y
+
+
 CONFIG_PACKAGE_kmod-hwmon-core=y
 CONFIG_PACKAGE_kmod-i2c-core=y
-CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ipt-conntrack=y
-CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+
 CONFIG_PACKAGE_kmod-ipt-core=y
 CONFIG_PACKAGE_kmod-ipt-ipopt=y
-CONFIG_PACKAGE_kmod-ipt-ipset=y
-CONFIG_PACKAGE_kmod-ipt-raw=y
+
 CONFIG_PACKAGE_kmod-keys-encrypted=y
 CONFIG_PACKAGE_kmod-keys-trusted=y
 CONFIG_PACKAGE_kmod-lib-textsearch=y
@@ -239,12 +242,11 @@ CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
 CONFIG_PACKAGE_kmod-lib-zlib-inflate=y
 CONFIG_PACKAGE_kmod-lib-zstd=y
 CONFIG_PACKAGE_kmod-libphy=y
-CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
-CONFIG_PACKAGE_kmod-nf-ipt=y
-CONFIG_PACKAGE_kmod-nf-ipt6=y
-CONFIG_PACKAGE_kmod-nf-nat6=y
-CONFIG_PACKAGE_kmod-nft-arp=y
-CONFIG_PACKAGE_kmod-nft-bridge=y
+
+
+
+
+
 CONFIG_PACKAGE_kmod-nft-compat=y
 CONFIG_PACKAGE_kmod-nft-queue=y
 CONFIG_PACKAGE_kmod-phy-realtek=y
