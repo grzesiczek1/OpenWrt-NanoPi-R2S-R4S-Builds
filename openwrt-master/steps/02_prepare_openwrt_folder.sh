@@ -12,7 +12,7 @@ cp -R openwrt-fresh-master openwrt
 
 #freeze revision to SNAPSHOT from May 12, 2023
 cd openwrt
-git reset --hard d5182de637986a62bf654d75d6d8a8dc720b1f28
+git reset --hard 4e5aac472935ce3ba3abc9bd72b880951843092b
 
 echo "Current OpenWRT commit"
 git log -1
