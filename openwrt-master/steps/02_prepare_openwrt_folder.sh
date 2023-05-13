@@ -10,9 +10,9 @@ cd "$ROOTDIR/build"
 
 cp -R openwrt-fresh-master openwrt
 
-#freeze revision to SNAPSHOT from May 11, 2023 before gcc jump
+#freeze revision to SNAPSHOT from May 8, 2023 - last working snaphot
 cd openwrt
-git reset --hard 5ca3386c8a156f0feb659bacffd88306a82f5545
+git reset --hard bbc7de3b164f43f44feff9ef8e72a2b475953eec
 
 echo "Current OpenWRT commit"
 git log -1
