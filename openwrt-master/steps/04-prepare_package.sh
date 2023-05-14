@@ -18,15 +18,16 @@ git clone https://github.com/stangri/source.openwrt.melmac.net stangri_repo
 cd openwrt
 ./scripts/feeds update -a
 
+##Do not replace packages
 # replace vpn routing packages
-rm -rf feeds/packages/net/vpn-policy-routing/
-cp -R ../stangri_repo/vpn-policy-routing feeds/packages/net/
-rm -rf feeds/luci/applications/luci-app-vpn-policy-routing
-cp -R ../stangri_repo/luci-app-vpn-policy-routing feeds/luci/applications/
+# m -rf feeds/packages/net/vpn-policy-routing/
+# cp -R ../stangri_repo/vpn-policy-routing feeds/packages/net/
+# rm -rf feeds/luci/applications/luci-app-vpn-policy-routing
+# cp -R ../stangri_repo/luci-app-vpn-policy-routing feeds/luci/applications/
 
 # add pbr
-cp -R ../stangri_repo/pbr feeds/packages/net/
-cp -R ../stangri_repo/luci-app-pbr feeds/luci/applications/
+# cp -R ../stangri_repo/pbr feeds/packages/net/
+# cp -R ../stangri_repo/luci-app-pbr feeds/luci/applications/
 
 ## replace acme & haproxy with newer versions taken from master
 #rm -rf feeds/packages/net/acme*
