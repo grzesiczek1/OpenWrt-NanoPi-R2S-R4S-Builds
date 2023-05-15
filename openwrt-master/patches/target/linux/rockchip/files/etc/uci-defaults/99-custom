@@ -1,0 +1,10 @@
+cat << "EOF" > /etc/uci-defaults/99-custom
+uci -q batch << EOI
+set network.lan.ipaddr='10.20.30.20'
+set network.lan.gateway='10.20.30.40'
+set network.lan.netmask='255.255.255.0'
+set network.lan.proto='static'
+add_list network.lan.dns='10.20.30.50'
+commit network
+EOI
+EOF
