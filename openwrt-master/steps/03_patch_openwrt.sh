@@ -60,8 +60,8 @@ cp $BUILDDIR/openwrt-fresh-$OPENWRT_BRANCH/target/linux/generic/config-5.15 targ
 
 #cleanup
 if [ -e .config ]; then
-   echo "Cleaning up ..."
-   make target/linux/clean
-   make package/boot/uboot-rockchip/clean
-   make package/kernel/r8168/clean
+    echo "Cleaning up ..."
+    make target/linux/clean
+    make package/boot/uboot-rockchip/clean
+    make package/kernel/r8168/clean
 fi
