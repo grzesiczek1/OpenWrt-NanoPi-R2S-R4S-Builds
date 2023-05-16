@@ -12,7 +12,7 @@ cp -R openwrt-fresh-master openwrt
 
 ## Use when you need to lock openwrt revision to specific commit
 #freeze revision to SNAPSHOT from May 5, 2023
-#cd openwrt
+cd openwrt
 #git reset --hard bbc7de3b164f43f44feff9ef8e72a2b475953eec
 
 ## Display recent commit with details
