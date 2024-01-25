@@ -29,6 +29,7 @@ on:
         options:
         - '21.02'
         - '22.03'
+        - '23.05'
         - 'master'
       model_R4S:
         description: 'Build R4S'
